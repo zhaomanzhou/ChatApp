@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="632.0" prefWidth="728.0" style="-fx-background-color: #2d3447;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="foreground.controller.RegisterController">
+   <children>
+      <JFXTextField fx:id="username" layoutX="227.0" layoutY="229.0" prefHeight="30.0" prefWidth="363.0" promptText="昵称" style="-fx-text-fill: #a0a2ab;">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="password" layoutX="227.0" layoutY="304.0" prefHeight="30.0" prefWidth="363.0" promptText="密码" style="-fx-text-fill: #a0a2ab;">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </JFXTextField>
+      <JFXRadioButton fx:id="sexMan" layoutX="236.0" layoutY="400.0" text="男" textFill="#a0a2ab">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="sexWoman" layoutX="476.0" layoutY="400.0" text="女" textFill="#a0a2ab">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXButton layoutX="189.0" layoutY="501.0" onAction="#register" prefHeight="30.0" prefWidth="340.0" style="-fx-background-color: #2196f3;" text="注册">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="57.0" fitWidth="56.0" layoutX="139.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/account.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="56.0" fitWidth="44.0" layoutX="145.0" layoutY="311.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/password.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="121.0" fitWidth="137.0" layoutX="323.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/chat.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="56.0" fitWidth="44.0" layoutX="145.0" layoutY="395.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/gender.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="590.0" layoutY="55.0" onAction="#login" style="-fx-background-color: #303442; -fx-border-color: #a0a2ab;" text="登陆" textFill="#a0a2ab">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

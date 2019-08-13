@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import org.controlsfx.control.textfield.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" stylesheets="@../styles/main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="foreground.controller.MainController">
+   <children>
+      <Pane prefHeight="814.0" prefWidth="65.0" style="-fx-background-color: #1d232a;">
+         <children>
+            <ImageView fx:id="selfHeadImage" fitHeight="69.0" fitWidth="55.0" layoutX="5.0" layoutY="22.0" onMouseClicked="#selfHeadImageClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/avatar-367-456319.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="currentMeaage" fitHeight="60.0" fitWidth="45.0" layoutX="10.0" layoutY="145.0" onMouseClicked="#currentMessageClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/message_active.png" />
+               </image>
+            </ImageView>
+            <ImageView id="friend" fx:id="friend" fitHeight="60.0" fitWidth="45.0" layoutX="10.0" layoutY="220.0" onMouseClicked="#friendClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/contact.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="group" fitHeight="60.0" fitWidth="45.0" layoutX="10.0" layoutY="295.0" onMouseClicked="#groupClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/group_chat.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="location" fitHeight="60.0" fitWidth="45.0" layoutX="10.0" layoutY="370.0" onMouseClicked="#locationClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/online.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="setting" fitHeight="60.0" fitWidth="45.0" layoutX="10.0" layoutY="731.0" onMouseClicked="#settingClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/setting.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="65.0" prefHeight="814.0" prefWidth="287.0" style="-fx-background-color: #242a31;">
+         <children>
+            <ScrollPane id="scrol1" layoutX="-2.0" layoutY="110.0" prefHeight="704.0" prefWidth="290.0" styleClass="scrol1" stylesheets="@../styles/main.css">
+               <content>
+                  <VBox fx:id="contactListVbox" prefWidth="244.0" />
+               </content>
+            </ScrollPane>
+            <TextField layoutX="52.0" layoutY="33.0" prefHeight="33.0" prefWidth="183.0" promptText="搜索" style="-fx-background-color: #363d45;" />
+            <Line endX="170.0" layoutX="115.0" layoutY="91.0" startX="-114.0" stroke="#7c6666" />
+         </children>
+      </Pane>
+      <Pane layoutX="352.0" layoutY="-6.0" prefHeight="814.0" prefWidth="849.0" style="-fx-background-color: #F5F5F5;">
+         <children>
+            <Pane layoutX="1.0" layoutY="6.0" prefHeight="129.0" prefWidth="847.0" style="-fx-background-color: #F5F5F5;">
+               <children>
+                  <Label layoutX="39.0" layoutY="89.0" text="Nothing is possible" textFill="#6a8dad">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" layoutX="39.0" layoutY="44.0">
+                     <children>
+                        <Label fx:id="curChaterName" layoutX="39.0" layoutY="44.0" text="Peter">
+                           <font>
+                              <Font name="Arial" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="131.0" layoutY="57.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="10.0" prefWidth="10.0" style="-fx-background-color: green; -fx-background-radius: 100%;" text="1adad" textFill="#2f2e2e">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <JFXSnackbar layoutX="780.0" layoutY="62.0" />
+                  <ImageView fitHeight="45.0" fitWidth="65.0" layoutX="717.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/moreclass.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" layoutX="43.0" layoutY="129.0" prefHeight="536.0" prefWidth="802.0" style="-fx-background-color: #F5F5F5;" styleClass="edge-to-edge">
+               <content>
+                  <VBox fx:id="messageVbox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="524.0" prefWidth="799.0" style="-fx-background-color: #F5F5F5;" />
+               </content>
+            </ScrollPane>
+            <Pane layoutY="665.0" prefHeight="149.0" prefWidth="849.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <FlowPane hgap="14.0" layoutX="14.0" layoutY="8.0" prefHeight="36.0" prefWidth="448.0">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/emoji.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="35.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/file.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="35.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/message_history.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </FlowPane>
+                  <FlowPane alignment="TOP_RIGHT" hgap="14.0" layoutX="609.0" layoutY="8.0" prefHeight="36.0" prefWidth="183.0">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/phone.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="35.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/video.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </FlowPane>
+                  <JFXButton layoutX="720.0" layoutY="98.0" onAction="#sendMessage" prefHeight="35.0" prefWidth="78.0" style="-fx-background-color: #cdcdcd;" text="发 送">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </JFXButton>
+                  <TextArea fx:id="inputTextArea" layoutX="15.0" layoutY="51.0" prefHeight="93.0" prefWidth="684.0" wrapText="true" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

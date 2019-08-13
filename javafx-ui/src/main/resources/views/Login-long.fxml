@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="490.0" prefWidth="803.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.Login">
+   <children>
+      <JFXTextField alignment="TOP_LEFT" layoutX="238.0" layoutY="176.0" prefHeight="30.0" prefWidth="363.0" promptText="账号" style="-fx-text-fill: #999;" unFocusColor="#a19d9d">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField layoutX="238.0" layoutY="270.0" prefHeight="30.0" prefWidth="363.0" promptText="密码" style="-fx-text-fill: #999;" unFocusColor="#a19d9d">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXButton layoutX="690.0" layoutY="42.0" style="-fx-background-color: #151928; -fx-border-color: #a0a2ab;" text="注册" textFill="#a0a2ab">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="519.0" layoutY="382.0" prefHeight="30.0" prefWidth="72.0" style="-fx-background-color: #2196f3;" text="登陆" textFill="#c0c2cc">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="238.0" layoutY="382.0" prefHeight="30.0" prefWidth="72.0" style="-fx-background-color: #2196f3;" text="游客" textFill="#c0c2cc">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="57.0" fitWidth="56.0" layoutX="151.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/account.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="57.0" fitWidth="56.0" layoutX="151.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/password.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="121.0" fitWidth="137.0" layoutX="341.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/chat.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

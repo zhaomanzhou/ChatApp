@@ -1,0 +1,19 @@
+.user-tab:hover{
+    -fx-background-color: #574e7b;
+}
+
+.user-tab{
+    -fx-background-color:  #242a31;
+}
+
+
+
+
+#scrol1 > .viewport {
+    -fx-background-color: transparent;
+}
+
+#scrol1{
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}

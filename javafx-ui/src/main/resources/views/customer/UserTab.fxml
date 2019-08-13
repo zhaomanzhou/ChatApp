@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root type="javafx.scene.layout.Pane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="72.0" prefWidth="285.0" styleClass="user-tab" stylesheets="@../../styles/main.css">
+         <children>
+            <ImageView id="headImage" fx:id="headImage" fitHeight="50.0" fitWidth="50.0" layoutX="9.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/avatar_icon_png_70860.png" />
+               </image>
+            </ImageView>
+            <Label id="name" fx:id="name" layoutX="76.0" layoutY="7.0" text="Peter" textFill="#c9b9b9">
+               <font>
+                  <Font name="Arial" size="22.0" />
+               </font>
+            </Label>
+            <Label id="lastestMessage" fx:id="lastestMessage" layoutX="74.0" layoutY="45.0" text="Nothing is possible" textFill="#c38484">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label id="messageNumLabel" fx:id="messageNumLabel" alignment="CENTER" layoutX="254.0" layoutY="12.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: #7ac6f9; -fx-background-radius: 100%;" text="1" textFill="#f5f0f0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="53.0" layoutY="52.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="10.0" prefWidth="10.0" style="-fx-background-color: green; -fx-background-radius: 100%;" text="1adad" textFill="#2f2e2e">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label id="timeDuration" fx:id="timeDuration" layoutX="227.0" layoutY="44.0" text="3分钟前" textFill="#b05656" />
+         </children>
+      </Pane>
+   </children>
+</fx:root>

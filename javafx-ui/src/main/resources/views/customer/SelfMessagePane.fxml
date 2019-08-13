@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root minHeight="-Infinity" type="javafx.scene.layout.Pane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Pane minHeight="-Infinity" prefHeight="75.0" prefWidth="718.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+           <children>
+              <ImageView fx:id="headImage" fitHeight="84.0" fitWidth="55.0" layoutX="7.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                 <image>
+                    <Image url="@../../images/avatar_icon_png_70860.png" />
+                 </image>
+              </ImageView>
+              <Text fx:id="text" layoutX="73.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="你好" wrappingWidth="373.05517578125">
+                 <font>
+                    <Font size="24.0" />
+                 </font>
+              </Text>
+           </children>
+        </Pane>
+    </children>
+</fx:root>
