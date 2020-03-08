@@ -8,13 +8,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="common" />
-        <module name="tcp-convert" />
         <module name="tcp-transport" />
         <module name="http-server" />
         <module name="tcp-server" />
         <module name="javafx-ui" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="tcp-convert" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
