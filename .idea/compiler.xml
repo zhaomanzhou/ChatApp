@@ -8,10 +8,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="common" />
-        <module name="http-server" />
-        <module name="javafx-ui" />
         <module name="tcp-convert" />
+        <module name="tcp-transport" />
+        <module name="http-server" />
         <module name="tcp-server" />
+        <module name="javafx-ui" />
       </profile>
     </annotationProcessing>
   </component>

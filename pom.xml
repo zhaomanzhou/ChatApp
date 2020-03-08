@@ -13,6 +13,7 @@
         <module>tcp-server</module>
         <module>javafx-ui</module>
         <module>tcp-convert</module>
+        <module>tcp-transport</module>
     </modules>
 
 

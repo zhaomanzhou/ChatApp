@@ -24,7 +24,6 @@ public class IoArgs {
 
     public interface IoArgsEventListener {
         void onStarted(IoArgs args);
-
         void onCompleted(IoArgs args);
     }
 }

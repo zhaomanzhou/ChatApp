@@ -1,3 +1,6 @@
+/*
+package zmz;
+
 import bean.po.User;
 import bean.vo.Message;
 import bean.vo.MessageType;
@@ -267,3 +270,4 @@ public class TCPServer implements ClientHandler.ClientHandlerCallback {
         }
     }
 }
+*/

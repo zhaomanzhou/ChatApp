@@ -1,5 +1,7 @@
+package zmz.bootstrap;
 
 import constants.UDPConstants;
+import lombok.extern.slf4j.Slf4j;
 import util.ByteUtils;
 
 import java.net.DatagramPacket;
@@ -7,10 +9,14 @@ import java.net.DatagramSocket;
 import java.nio.ByteBuffer;
 import java.util.UUID;
 
-class UDPProvider {
+@Slf4j
+public class UDPProvider {
     private static Provider PROVIDER_INSTANCE;
 
-    static void start(int port) {
+
+
+
+    public static void start(int port) {
         stop();
         String sn = UUID.randomUUID().toString();
         Provider provider = new Provider(sn, port);
@@ -18,7 +24,7 @@ class UDPProvider {
         PROVIDER_INSTANCE = provider;
     }
 
-    static void stop() {
+    public static void stop() {
         if (PROVIDER_INSTANCE != null) {
             PROVIDER_INSTANCE.exit();
             PROVIDER_INSTANCE = null;
@@ -34,7 +40,7 @@ class UDPProvider {
         final byte[] buffer = new byte[128];
 
         Provider(String sn, int port) {
-            super();
+            super("UDP Thread");
             this.sn = sn.getBytes();
             this.port = port;
         }
@@ -43,7 +49,7 @@ class UDPProvider {
         public void run() {
             super.run();
 
-            System.out.println("UDPProvider Started.");
+            log.info("UDPProvider Started.");
 
             try {
                 // 监听20000 端口
@@ -65,7 +71,7 @@ class UDPProvider {
                     boolean isValid = clientDataLen >= (UDPConstants.HEADER.length + 2 + 4)
                             && ByteUtils.startsWith(clientData, UDPConstants.HEADER);
 
-                    System.out.println("UDPProvider receive form ip:" + clientIp
+                    log.info("UDPProvider receive form ip:" + clientIp
                             + "\tport:" + clientPort + "\tdataValid:" + isValid);
 
                     if (!isValid) {
@@ -96,9 +102,9 @@ class UDPProvider {
                                 receivePack.getAddress(),
                                 responsePort);
                         ds.send(responsePacket);
-                        System.out.println("UDPProvider response to:" + clientIp + "\tport:" + responsePort + "\tdataLen:" + len);
+                        log.info("UDPProvider response to:" + clientIp + "\tport:" + responsePort + "\tdataLen:" + len);
                     } else {
-                        System.out.println("UDPProvider receive cmd nonsupport; cmd:" + cmd + "\tport:" + port);
+                        log.info("UDPProvider receive cmd nonsupport; cmd:" + cmd + "\tport:" + port);
                     }
                 }
             } catch (Exception ignored) {
@@ -107,7 +113,7 @@ class UDPProvider {
             }
 
             // 完成
-            System.out.println("UDPProvider Finished.");
+            log.info("UDPProvider Finished.");
         }
 
         private void close() {
