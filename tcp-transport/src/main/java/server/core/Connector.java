@@ -84,6 +84,7 @@ public class Connector
             outputHandlerChain.doChainHandler(s);
         } catch (Exception e)
         {
+            //emm......🤔
             ServerContext.get().getConfiguration().getConnectorStatusChangedListener()
                     .onException(this, e);
         }
